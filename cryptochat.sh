@@ -7,15 +7,31 @@ echo -e '\e[1;92m| __\| . \||_/\| . \|_ _\|   |\e[1;91m| __\||_|\|  \ |_ _\'
 echo -e '\e[1;92m| \__|  <_| __/| __/  || | . |\e[1;91m| \__| _ || . \  ||'
 echo -e '\e[1;92m|___/|/\_/|/   |/     |/ |___/\e[1;91m|___/|/ |/|/\_/  |/\e[0m v.global'
 echo""
-printf "     \e[1;90;102m >> github.com/\e[1;97;101mabhackerofficial << \e[0m\n"
+printf "\e[1;90;102m >> github.com/\e[1;97;101mabhackerofficial/\e[1;90;102mOpen-crytochat << \e[0m\n"
 sleep 2
 echo""
 
 if [[ -e ngrok ]]; then
 echo ""
 else
-command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
-command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
+command -v unzip > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require nano but it's not installed, Now Installing.\e[0m"; pkg install unzip -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi ; }
+command -v php > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require nano but it's not installed, Now Installing.\e[0m"; pkg install php -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi ; }
+command -v wget > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require nano but it's not installed, Now Installing.\e[0m"; pkg install wget -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi ;  bash cryptochat.sh; }
 printf "\e[1;92m[\e[0m+\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
