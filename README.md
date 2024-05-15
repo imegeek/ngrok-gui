@@ -19,7 +19,7 @@ ngrok-gui is a Python-based graphical user interface for ngrok, making it easier
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/ngrok-gui.git
+    git clone https://github.com/imegeek/ngrok-gui
     cd ngrok-gui
     ```
 
@@ -66,10 +66,6 @@ ngrok-gui is a Python-based graphical user interface for ngrok, making it easier
 <div align="center">
 <img src="https://github.com/imegeek/ngrok-gui/assets/63346676/3cdd25ae-26cb-440b-8abe-34955cb783be" alt="ngrok-gui screenshot">
 </div>
-
-## Contributing
-
-We welcome contributions! Please read `CONTRIBUTING.md` for details on the code of conduct, and the process for submitting pull requests.
 
 ## License
 
